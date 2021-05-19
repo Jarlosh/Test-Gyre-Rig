@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1645,8 +1645,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836733439}
-  - component: {fileID: 1836733440}
   - component: {fileID: 1836733442}
+  - component: {fileID: 1836733440}
+  - component: {fileID: 1836733443}
+  - component: {fileID: 1836733441}
   m_Layer: 0
   m_Name: Mind
   m_TagString: Untagged
@@ -1681,12 +1683,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {fileID: 1836733439}
-  distanceInput: {fileID: 1794455680}
-  speedInput: {fileID: 886592096}
-  distance: 5
-  speed: 5
-  minDistance: 1
-  minSpeed: 1
+  distance: {fileID: 1836733443}
+  speed: {fileID: 1836733441}
+--- !u!114 &1836733441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836733438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96226ed55c34bffb750deb6588c132e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputBox: {fileID: 886592096}
+  value: 5
+  minValue: 1
+  maxValue: 100
 --- !u!114 &1836733442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,6 +1716,22 @@ MonoBehaviour:
   data: {fileID: 1836733440}
   spawner: {fileID: 1029209373}
   cameraMind: {fileID: 452597900}
+--- !u!114 &1836733443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836733438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96226ed55c34bffb750deb6588c132e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputBox: {fileID: 1794455680}
+  value: 5
+  minValue: 1
+  maxValue: 100
 --- !u!1 &1911917374
 GameObject:
   m_ObjectHideFlags: 0
